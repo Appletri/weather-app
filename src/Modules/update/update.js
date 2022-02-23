@@ -1,4 +1,5 @@
 import './style.css';
+import { format } from 'date-fns';
 
 function update(data, parent) {
   if (document.querySelector('.main')) {
@@ -9,6 +10,8 @@ function update(data, parent) {
   const hourly = document.createElement('div');
   const daily = document.createElement('div');
   const forecast = document.createElement('div');
+  const currentDay = format(new Date(), 'EEEE');
+  console.log(currentDay);
   const dataCurrent = ['temp', 'pressure', 'humidity', 'wind_speed'];
   main.className = 'main';
   current.className = 'current';
@@ -23,6 +26,9 @@ function update(data, parent) {
     arr.forEach((x) => {
       const div = document.createElement('div');
       const info = [x.temp.day, x.clouds, x.weather[0].main];
+      const day = document.createElement('h3');
+      day.textContent = 'Friday';
+      div.appendChild(day);
       for (let i = 0; i < info.length; i += 1) {
         const p = document.createElement('p');
         p.textContent = `${forecastData[i]}:${info[i]}`;

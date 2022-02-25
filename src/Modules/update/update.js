@@ -10,33 +10,31 @@ function update(data, parent) {
   const hourly = document.createElement('div');
   const daily = document.createElement('div');
   const forecast = document.createElement('div');
-  const currentDay = format(new Date(), 'EEEE');
-  console.log(currentDay);
   const dataCurrent = ['temp', 'pressure', 'humidity', 'wind_speed'];
   main.className = 'main';
   current.className = 'current';
   forecast.className = 'forecast';
-
+  daily.className = 'daily';
   function displayForecastData(arr, parent) {
     const forecastData = ['temp', 'clouds', 'weather'];
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const header = document.createElement('h1');
-    header.textContent = '7 Day Forecast';
-    parent.appendChild(header);
-    arr.forEach((x) => {
+    header.textContent = '8 Day Forecast';
+    forecast.appendChild(header);
+    // const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    for (let y = 0; y < arr.length; y += 1) {
       const div = document.createElement('div');
-      const info = [x.temp.day, x.clouds, x.weather[0].main];
+      const info = [arr[y].temp.day, arr[y].clouds, arr[y].weather[0].main];
       const day = document.createElement('h3');
-      day.textContent = 'Friday';
+      day.textContent = format(new Date((new Date()).valueOf() + (y * 1000 * 3600 * 24)), 'EEEE');
       div.appendChild(day);
       for (let i = 0; i < info.length; i += 1) {
         const p = document.createElement('p');
-        p.textContent = `${forecastData[i]}:${info[i]}`;
+        p.textContent = `${forecastData[i]}: ${info[i]}`;
         div.appendChild(p);
       }
       div.className = 'weather-details';
       parent.appendChild(div);
-    });
+    }
   }
 
   function displayData(arr, parent) {

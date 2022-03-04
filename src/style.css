@@ -3,10 +3,15 @@
 html {
   font-family: 'Montserrat', sans-serif;
 }
-
+body {
+  margin: 0px;
+}
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top:50%;
 }
+

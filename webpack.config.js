@@ -27,19 +27,8 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(png|jpe?g|webp|git|svg|)$/i,
-        use: [
-          {
-            loader: 'img-optimize-loader',
-            options: {
-              compress: {
-                // This will take more time and get smaller images.
-                webp: true,
-                disableOnDevelopment: true,
-              },
-            },
-          },
-        ],
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },

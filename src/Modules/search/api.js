@@ -1,16 +1,25 @@
+import icon from './search_black_24dp.svg';
 import { update } from '../update/update';
-import './style.css';
 
-function searchBar(location) {
+function searchBar(parent, location) {
   const searchContainer = document.createElement('div');
   const locationInput = document.createElement('input');
   const searchButton = document.createElement('button');
+  const searchIcon = new Image();
   const units = 'imperial';
+  searchIcon.src = icon;
   locationInput.type = 'text';
   locationInput.className = 'location-input';
   locationInput.placeholder = 'Search Location...';
-  searchButton.textContent = 'search';
   searchButton.className = 'search-button';
+  searchButton.appendChild(searchIcon);
+  searchContainer.className = 'search-container';
+  locationInput.addEventListener('keyup', (event) => {
+    if (event.keyCode === 13) {
+      event.preventDefault;
+      searchButton.click();
+    }
+  });
 
   function search() {
     async function fetchData() {
@@ -33,7 +42,7 @@ function searchBar(location) {
   searchButton.addEventListener('click', search);
   searchContainer.appendChild(locationInput);
   searchContainer.appendChild(searchButton);
-  location.appendChild(searchContainer);
+  parent.appendChild(searchContainer);
 }
 
 export { searchBar };

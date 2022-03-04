@@ -8,7 +8,7 @@ function update(data, parent) {
   }
   const main = document.createElement('div');
   const current = document.createElement('div');
-  const hourly = document.createElement('div');
+  // const hourly = document.createElement('div');
   const daily = document.createElement('div');
   const forecast = document.createElement('div');
   const dataCurrent = ['temp', 'pressure', 'humidity', 'wind_speed'];
@@ -18,7 +18,7 @@ function update(data, parent) {
   daily.className = 'daily';
 
   function displayForecastData(arr, parent) {
-    const forecastData = ['temp', 'night', 'weather'];
+    // const forecastData = ['temp', 'night', 'weather'];
     const header = document.createElement('h1');
     header.textContent = '8 Day Forecast';
     forecast.appendChild(header);
@@ -51,7 +51,7 @@ function update(data, parent) {
       parent.appendChild(div);
     });
   }
-  displayData(dataCurrent, main);
+  // displayData(dataCurrent, main);
   // displayForecastData(data.hourly, hourly);
   displayForecastData(data.daily, daily);
 

@@ -22,8 +22,8 @@
 /* Modified 2016-05-01 (set color via variable) by PatharaNor */
 
 :root {
-  --weather-border-color: #5A5A5A;
-  --weather-bg-color: white;
+  --weather-border-color: #e0e0e0;
+  --weather-bg-color: rgb(199, 199, 199);
 }
 
 .icon {
@@ -127,13 +127,13 @@
 .lightning,
 .snow {
   position: absolute;
-  z-index: 2;
+  z-index: -1;
   top: 50%;
   left: 50%;
   width: 3.75em;
   height: 3.75em;
   margin: 0.375em 0 0 -2em;
-  background: var(--weather-bg-color);
+  /* background: var(--weather-bg-color); */
 }
 
 .rain:after {

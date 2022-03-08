@@ -22,6 +22,7 @@ function searchBar(parent, location) {
   });
 
   function search() {
+    parent.classList.add('there-is-content');
     async function fetchData() {
       try {
         const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${locationInput.value}&limit=1&appid=5c2b9f9ff5cf29851e0c0f6698975a00`, { mode: 'cors' });

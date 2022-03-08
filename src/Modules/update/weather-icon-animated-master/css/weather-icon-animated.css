@@ -23,7 +23,7 @@
 
 :root {
   --weather-border-color: #e0e0e0;
-  --weather-bg-color: rgb(199, 199, 199);
+  --weather-bg-color: #e0e0e000;
 }
 
 .icon {
@@ -42,8 +42,9 @@
   width: 3.6875em;
   height: 3.6875em;
   margin: -1.84375em;
-  background: var(--weather-bg-color);
+  background: var(--weather-border-color);
   border-radius: 50%;
+  border: 1px solid var(--weather-border-color);
   box-shadow:
     -2.1875em 0.6875em 0 -0.6875em var(--weather-bg-color),
     2.0625em 0.9375em 0 -0.9375em var(--weather-bg-color),
@@ -81,12 +82,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.875em;
+  height: 2.875em;
   margin: -1.25em;
-  background: var(--weather-bg-color);
+  background: var(--weather-border-color);
   border-radius: 50%;
-  box-shadow: 0 0 0 0.375em var(--weather-border-color);
+  /* box-shadow: 0 0 0 0.375em var(--weather-border-color); */
   animation: spin 12s infinite linear;
 }
 .rays {

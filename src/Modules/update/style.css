@@ -17,6 +17,18 @@
   height: 14rem;
 }
 
+.forecast {
+  width: 100vw;
+}
+
+.main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
 .forecast p {
   margin: 0;
 }

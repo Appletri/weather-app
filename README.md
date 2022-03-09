@@ -2,7 +2,7 @@
 ![](https://github.com/Appletri/Appletri/blob/main/assets/weather-Jarvis.gif)
 
 ## Links
-- [Try Weather here!](https://Appletri.github.io/weather-app/dist)
+- [Try Weather App here!](https://Appletri.github.io/weather-app/dist)
 
 - [Link to the Assignment](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/weather-app)
 

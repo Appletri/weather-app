@@ -12,4 +12,4 @@
 ## About
 Search 8 day forecast on city location. Displays day/night temperature and weather in a simple design. 
 
-The weather assignment focuses on the fetch, async, and await functions to pull API data from OpenWeather.
+I really wanted to make a simple design and to only display useful information for everyday use.
